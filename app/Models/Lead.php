@@ -56,12 +56,12 @@ class Lead extends Model
     // Scopes
     // ──────────────────────────────────────────────────────────────────────────
 
-    public function scopePending($query)
+    public function scopePending(\Illuminate\Database\Eloquent\Builder $query): \Illuminate\Database\Eloquent\Builder
     {
         return $query->where('status', 'pending');
     }
 
-    public function scopeQualified($query)
+    public function scopeQualified(\Illuminate\Database\Eloquent\Builder $query): \Illuminate\Database\Eloquent\Builder
     {
         return $query->where('status', 'qualified');
     }
